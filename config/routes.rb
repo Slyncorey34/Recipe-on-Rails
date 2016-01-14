@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root 'home#index'
 # users GET    /users(.:format)            users#index
     
-get '/login', to: 'welcome#index'
+get '/login', to: 'sessions#new'
+post '/login',to:  'sessions#create'   
 
     post   '/users', to:'users#create'
   get    '/users/new', to:'users#new'        
