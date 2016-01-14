@@ -1,26 +1,29 @@
 class UserController < ApplicationController
-
-	def create
-		@user = User.new(user_params)
-		if @user.save
-			session[:user_id]=@user.user_idredirect to @user_idelse
-				redirect_to @user
-		else
-			redirect_to new_user_path
-		end
+	def index
 	end
-
+	
 	def new
 		@user = User.new
+	end
+	
+	def show
+		@user = User.find(params[:id])		
+	end
+	
+	def create
+		puts params.inspect
+		@user = User.new(user_params)
+	  if @user.save
+			session[:user_id]= @user.id
+	    redirect_to @user
+	  else
+	  	redirect_to new_user_path
+	  end
 	end
 
 	def edit
 	
 		@user = User.find(params[:id])
-	end
-
-	def show
-		@user = User.find(params[:id])		
 	end
 
 	def update
@@ -40,8 +43,8 @@ class UserController < ApplicationController
 	end
 
 private
-	def params
-		params.require(:user).permit(:user, :email, :password)
+	def user_params
+		params.require(:user).permit(:username, :password, :email)
 
 	end
 end
