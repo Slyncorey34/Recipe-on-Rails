@@ -7,9 +7,29 @@ Rails.application.routes.draw do
 # users GET    /users(.:format)            users#index
     
 get '/login', to: 'sessions#new'
+
 post '/login', to: 'sessions#create'
 
     
+
+# post '/login',to:  'sessions#create'   
+
+#     post   '/users', to:'users#create'
+#   get    '/users/new', to:'users#new'        
+# get    '/users/:id/edit', to: 'users#edit'
+# get    '/users/:id', to: 'users#show'
+#             # PATCH  /users/:id(.:format)        users#update
+#             # PUT    /users/:id(.:format)        users#update
+# delete '/users/:id', to:'users#destroy'
+            
+#     recipes GET    /recipes(.:format)          recipes#index
+#             POST   /recipes(.:format)          recipes#create
+#  new_recipe GET    /recipes/new(.:format)      recipes#new
+# edit_recipe GET    /recipes/:id/edit(.:format) recipes#edit
+#      recipe GET    /recipes/:id(.:format)      recipes#show
+#             PATCH  /recipes/:id(.:format)      recipes#update
+#             PUT    /recipes/:id(.:format)      recipes#update
+#             DELETE /recipes/:id(.:format)      recipes#destroy   
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
