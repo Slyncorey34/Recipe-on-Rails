@@ -1,0 +1,7 @@
+<% @recipe.each do |recipe| %>
+<%= recipe.title %>
+<%=link_to 'View', recipe_path(recipe) %>
+<%#= recipe.body %>
+<br>
+<% end %>
+
