@@ -1,5 +1,4 @@
 <%= @recipe.title %>
 <br>
 <%= @recipe.body %>
-<%= link_to 'delete recipe', recipe_path, method: :delete%>
-
+<%= link_to 'delete recipe', recipe_path(params[:id]), method: :delete%>
