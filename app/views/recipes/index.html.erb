@@ -1,7 +1,11 @@
-<% @recipe.each do |recipe| %>
-<%= recipe.title %>
-<%=link_to 'View', recipe_path(recipe) %>
+<div id="container">
+	<% @recipe.each do |recipe| %>
+	<%= recipe.title %>
+	<%=link_to 'View', recipe_path(recipe) %>
 <%#= recipe.body %>
-<br>
-<% end %>
+	<br>
+	<% end %>
 
+<%=link_to 'Add a recipe', new_recipe_path %>
+
+</div>

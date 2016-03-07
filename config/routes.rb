@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'recipes#index'
 # users GET    /users(.:format)            users#index
     
-get '/', to: 'sessions#new'
+# get '/', to: 'sessions#new'
 
-post '/', to: 'sessions#create'
+# post '/', to: 'sessions#create'
 
     
 
@@ -41,7 +41,6 @@ post '/', to: 'sessions#create'
   #   resources :products
 
   # Example resource route with options:
-    resources :users
     resources :recipes
 
 

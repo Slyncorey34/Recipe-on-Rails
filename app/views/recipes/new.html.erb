@@ -1,9 +1,14 @@
-<p>Add a recipe</p>
-
-<%=form_for(@recipe) do|f|%>
-<%=f.label :title%>
-<%=f.text_field :title%>
-<%=f.label :body%>
-<%=f.text_field :body%>
-<%=f.submit%>
-<%end%>
+<div id="container">
+	<p>Add a recipe</p>
+	<%= form_for(@recipe) do|f|%>
+	<%= f.label :title%>
+	<div id="title">
+	<%= f.text_field :title%>
+	</div>
+	<%= f.label :instructions%>
+	<div id="text-box">
+	<%= f.text_field :body%>
+	</div>
+	<%= f.submit %>
+	<%end%>
+</div>
