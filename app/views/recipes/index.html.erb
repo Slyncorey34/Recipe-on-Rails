@@ -1,11 +1,10 @@
 <div id="container">
+	<h2>Recipe Box</h2>
 	<% @recipe.each do |recipe| %>
-	<%= recipe.title %>
-	<%=link_to 'View', recipe_path(recipe) %>
-<%#= recipe.body %>
+	<%= link_to recipe.title, recipe_path(recipe) %>
 	<br>
 	<% end %>
-
+	<br>
 <%=link_to 'Add a recipe', new_recipe_path %>
 
 </div>

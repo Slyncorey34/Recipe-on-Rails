@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'recipes#index'
 # users GET    /users(.:format)            users#index
     
-# get '/', to: 'sessions#new'
+
 
 # post '/', to: 'sessions#create'
 
@@ -26,10 +26,10 @@ Rails.application.routes.draw do
 #             POST   /recipes(.:format)          recipes#create
 #  new_recipe GET    /recipes/new(.:format)      recipes#new
 # edit_recipe GET    /recipes/:id/edit(.:format) recipes#edit
-#      recipe GET    /recipes/:id(.:format)      recipes#show
-#             PATCH  /recipes/:id(.:format)      recipes#update
-#             PUT    /recipes/:id(.:format)      recipes#update
-#             DELETE /recipes/:id(.:format)      recipes#destroy   
+     # recipe GET    /recipes/:id(.:format)      recipes#show
+            # PATCH  /recipes/:id(.:format)      recipes#update
+            # PUT    /recipes/:id(.:format)      recipes#update
+            # DELETE /recipes/:id(.:format)      recipes#destroy   
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

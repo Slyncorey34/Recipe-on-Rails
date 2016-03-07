@@ -12,15 +12,33 @@ font-family: Arial, sans-serif;
 }
 
 #container {
-	margin: 100px 390px;
-
-
-
+	margin: 90px auto;
+	width: 35%;
+	height: 300px;
+	background-color: #fff;
+	opacity: .7;
+	color: #333;
+	padding-top: 10px;
 }
+#container a {
+	text-decoration: none;
+}
+#container a:hover {
+			color: #1C162C;
+			font-weight: bolder;
+		}	
+
 #title input{
 	width: 240px;
 }
 #text-box input{
 	height: 150px;
 	width: 240px;
+}
+.button input{
+	background-color: #333;
+	color: #fff;
+	width: 80px;
+	padding: 10px;
+
 }

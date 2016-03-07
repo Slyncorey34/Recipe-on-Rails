@@ -1,7 +1,6 @@
 class RecipesController < ApplicationController
 
 	def index
-		# @user = User.where(params[:id])
 		@recipe = Recipe.all
 	end
 
@@ -14,8 +13,6 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		@user = current_user
-
 		@recipe = Recipe.new(recipe_params)
 		if @recipe.save
 			redirect_to recipes_path
@@ -25,26 +22,23 @@ class RecipesController < ApplicationController
 	end
 
 	def edit
-		@recipe.find(params[:id])
+		@recipe = Recipe.find(params[:id])
 	end
 
 	def update
-		@user = current_user
-		@recipe.find(params[:id])
-		if @recipe.update_attributes(recipe_params)
-			redirect_to recipes_path
-		else
-			render :edit
-		end
-	end
-
-# When you click 'delete this recipe, the error notes that the recipe is found on the recipe table by id. There is no reference made to the DESTROY or DELETE action, only the SHOW action. So it needs a command to delete this post.'
-
+		@recipe = Recipe.find(params[:id])
+    	if @recipe.update_attributes(recipe_params)
+      	redirect_to recipe_path(@recipe)
+    	else
+      	render :edit
+    	end
+  	end
+	
 
 	def destroy
 		@recipe = Recipe.find(params[:id])
-		@recipe.delete
-		redirect_to user_path
+    	@recipe.delete
+    	redirect_to recipes_path
 	end
 
 	private

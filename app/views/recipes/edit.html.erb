@@ -1,0 +1,19 @@
+<div id="container">
+
+	<%=form_for @recipe, method: :patch do |f|%>	
+		<%=f.label :title %>
+		<div id="title">
+		<%=f.text_field :title%>
+		</div>
+
+		<%=f.label :instructions%>
+		<div id="text-box">
+		<%=f.text_field :body%>
+		</div>
+		<br>
+		<div class="button">
+		<%=f.submit "Save"%>
+	</div>
+		<%end%>	
+		<%#= link_to 'Delete this recipe', recipe_path, method: :delete %>
+</div>
